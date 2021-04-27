@@ -1,0 +1,22 @@
+diff --git a/node_modules/react-native-draggable-flatlist/lib/index.js b/node_modules/react-native-draggable-flatlist/lib/index.js
+index 4698d70..c5a1197 100644
+--- a/node_modules/react-native-draggable-flatlist/lib/index.js
++++ b/node_modules/react-native-draggable-flatlist/lib/index.js
+@@ -399,7 +399,7 @@ var DraggableFlatList = /** @class */ (function (_super) {
+                         console.log("## measureLayout fail!", key);
+                 };
+                 var ref = _this.cellRefs.get(key);
+-                var viewNode = ref && ref.current && ref.current.getNode();
++                var viewNode = ref && ref.current;
+                 var flatListNode = _this.flatlistRef.current;
+                 if (viewNode && flatListNode) {
+                     // @ts-ignore
+@@ -430,7 +430,7 @@ var DraggableFlatList = /** @class */ (function (_super) {
+             var horizontal = _this.props.horizontal;
+             var containerRef = _this.containerRef.current;
+             if (containerRef) {
+-                containerRef.getNode().measure(function (_x, _y, w, h) {
++                containerRef.measure(function (_x, _y, w, h) {
+                     _this.containerSize.setValue(horizontal ? w : h);
+                 });
+             }
