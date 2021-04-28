@@ -14,8 +14,8 @@ const App = () => {
 
 	return (
 		<SafeAreaView style={backgroundStyle}>
-			<Text style={[styles.header]}>Hello!</Text>
 			<StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+			<Text style={[styles.header]}>Loop Editor: Chain 1</Text>
 			<Editor style={styles.editor} />
 		</SafeAreaView>
 	);
