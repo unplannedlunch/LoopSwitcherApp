@@ -97,6 +97,7 @@ const Editor = (props: ViewProps) => {
 						alert(JSON.stringify(d, null, 2));
 						setData(d);
 					}}
+					extraData={{ data }}
 				/>
 			</View>
 		</View>
