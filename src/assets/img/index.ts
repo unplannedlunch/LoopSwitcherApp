@@ -1,3 +1,3 @@
-import DragHandle from './dragHandle';
+import ImgDragHandle from './dragHandle';
 
-export { DragHandle };
+export { ImgDragHandle };

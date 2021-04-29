@@ -3,8 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, TouchableOpacityProps, View, ViewPr
 import DraggableFlatList, { RenderItemParams } from 'react-native-draggable-flatlist';
 
 import { Colors, Typography } from '../styles';
-import { DragHandle } from '../assets/img';
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import { ImgDragHandle } from '../assets/img';
 
 const initialData = [
 	{
@@ -55,27 +54,24 @@ const renderItem: (params: RenderItemParams<{ key: string; order: number; label:
 	isActive,
 	index,
 }) => {
-
-	const DragButton = (props: TouchableOpacityProps) => {
+	const DragHandle = (props: TouchableOpacityProps) => {
 		return (
-			<TouchableOpacity /**onPress={drag}**/ style={props.style}>
-				<DragHandle />
+			<TouchableOpacity onPressIn={drag} style={props.style}>
+				<ImgDragHandle />
 			</TouchableOpacity>
 		);
 	};
 
 	return (
-		<TouchableWithoutFeedback
-			style={[styles.loop, { backgroundColor: isActive ? Colors.tertiary : Colors.secondary }]}
-			onLongPress={drag}>
+		<View style={[styles.loop, { backgroundColor: isActive ? Colors.tertiary : Colors.secondary }]}>
 			<Text style={{ flex: 1, textAlign: 'center', textAlignVertical: 'center', ...Typography.body }}>
 				{item.order}
 			</Text>
 			<Text style={{ flex: 4, textAlign: 'center', textAlignVertical: 'center', ...Typography.body }}>
 				{item.label + '\n' + item.key}
 			</Text>
-			<DragButton style={{ flex: 1, ...Typography.body }} />
-		</TouchableWithoutFeedback>
+			<DragHandle style={{ flex: 1, ...Typography.body }} />
+		</View>
 	);
 };
 
