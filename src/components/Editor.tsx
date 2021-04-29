@@ -93,8 +93,6 @@ const Editor = (props: ViewProps) => {
 						for (const i in d) {
 							d[i].order = parseInt(i, 10);
 						}
-						// eslint-disable-next-line no-alert
-						alert(JSON.stringify(d, null, 2));
 						setData(d);
 					}}
 					extraData={{ data }}
