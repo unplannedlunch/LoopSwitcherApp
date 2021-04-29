@@ -8,39 +8,44 @@ import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 const initialData = [
 	{
-		key: 'Loop01',
+		key: 'loop01',
 		order: 0,
 		label: 'Loop 1',
 	},
 	{
-		key: 'Loop02',
+		key: 'loop02',
 		order: 1,
 		label: 'Loop 2',
 	},
 	{
-		key: 'Loop03',
+		key: 'loop03',
 		order: 2,
 		label: 'Loop 3',
 	},
 	{
-		key: 'Loop04',
+		key: 'loop04',
 		order: 3,
-		label: 'Loop 4',
+		label: 'loop 4',
 	},
 	{
-		key: 'Loop05',
+		key: 'loop05',
 		order: 4,
 		label: 'Loop 5',
 	},
 	{
-		key: 'Loop06',
+		key: 'loop06',
 		order: 5,
 		label: 'Loop 6',
 	},
 	{
-		key: 'Loop07',
+		key: 'loop07',
 		order: 6,
 		label: 'Loop 7',
+	},
+	{
+		key: 'loop08',
+		order: 7,
+		label: 'Loop 8',
 	},
 ];
 
