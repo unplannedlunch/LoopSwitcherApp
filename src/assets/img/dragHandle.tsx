@@ -1,7 +1,7 @@
 import Svg, { Rect } from 'react-native-svg';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { Colors } from '../../styles';
 
 export default () => (
 	<View style={[StyleSheet.absoluteFill, { alignItems: 'center', justifyContent: 'center' }]}>
