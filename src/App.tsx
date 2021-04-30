@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, Text, useColorScheme } from 'react-native';
 
 import { Colors, Typography } from './styles';
-import Editor from './components/Editor';
+import Editor from './components/LoopEditor';
 
 const App = () => {
 	const isDarkMode = useColorScheme() === 'dark';
